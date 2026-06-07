@@ -2,7 +2,38 @@
  * 1st Choice Child
  * editor-style.css
 */
+:root {
+	--black:        #000000;
+	--red:          #c2181a;
+	--gold:         #e5c249;
+	--grey:         #676767;
+	--grey-vdark:   #2f2f2f;
+	--grey-dark:    #414141;
+	--grey-light:   #d9d9d9;
+	--grey-vlight:  #efefef;
+	--white:        #ffffff;
+
+	--text: var(--black);
+	--text-input: var(--text);
+	--link-hover-color: var(--purple-dark);
+	--button-bg: var(--link-color);
+	--button-text: var(--white);
+	--button-border-color: transparent;
+	--button-border-color-hover: transparent;
+	--error:      var(--red);
+	--info:       #5057ba;
+	--success:    var(--green);
+
+	--border-radius: 10px;
+}
 
 * {
 	font-family: sans-serif;
+}
+
+.block-editor-block-list__layout .block-editor-block-list__block.big-red-box {
+	background: var(--red);
+	color: var(--white);
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 }

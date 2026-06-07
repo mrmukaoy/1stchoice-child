@@ -15,7 +15,7 @@ function firstchoice__enqueue_styles() {
 
 	wp_enqueue_style(
 		'google-fonts',
-		'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap',
+		'https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,700;1,400;1,700&display=swap',
 		false,
 		null
 	);
@@ -32,10 +32,14 @@ add_action( 'wp_enqueue_scripts', 'firstchoice__enqueue_styles' );
 function firstchoice__theme_setup() {
 
 	/* COLORS */
-	$black        = '#212121';
-	$grey         = '#a1a1a1';
-	$grey_light   = '#d4d4d4';
-	$grey_dark    = '#3b3b3b';
+	$black        = '#000000';
+	$red          = '#c2181a';
+	$gold         = '#e5c249';
+	$grey         = '#676767';
+	$grey_light   = '#d9d9d9';
+	$grey_vlight  = '#efefef';
+	$grey_dark    = '#414141';
+	$grey_vdark   = '#2f2f2f';
 	$white        = '#ffffff';
 
 	add_theme_support(
@@ -45,6 +49,21 @@ function firstchoice__theme_setup() {
 				'name'  => esc_html__( 'Black' ),
 				'slug'  => 'black',
 				'color' => $black,
+			),
+			array(
+				'name'  => esc_html__( 'Red' ),
+				'slug'  => 'red',
+				'color' => $red,
+			),
+			array(
+				'name'  => esc_html__( 'Gold' ),
+				'slug'  => 'gold',
+				'color' => $gold,
+			),
+			array(
+				'name'  => esc_html__( 'Grey Very Dark' ),
+				'slug'  => 'grey-vdark',
+				'color' => $grey_vdark,
 			),
 			array(
 				'name'  => esc_html__( 'Grey Dark' ),
@@ -60,6 +79,11 @@ function firstchoice__theme_setup() {
 				'name'  => esc_html__( 'Grey Light' ),
 				'slug'  => 'grey-light',
 				'color' => $grey_light,
+			),
+			array(
+				'name'  => esc_html__( 'Grey Very Light' ),
+				'slug'  => 'grey-vlight',
+				'color' => $grey_vlight,
 			),
 			array(
 				'name'  => esc_html__( 'White' ),
@@ -126,7 +150,6 @@ function firstchoice_more_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-	/*
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Subfooter 2', 'firstchoice' ),
@@ -149,9 +172,8 @@ function firstchoice_more_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
-	*/
 }
-add_action( 'widgets_init', 'firstchoice_more_widgets_init' );
+// add_action( 'widgets_init', 'firstchoice_more_widgets_init' );
 
 /** Custom template tags for this theme. */
 require get_stylesheet_directory() . '/inc/template-tags.php';

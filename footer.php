@@ -19,15 +19,17 @@
 		if ( is_active_sidebar( 'footer-3' ) ) { $col++; }
 		$col = 'col-' . $col;
 
+		/*
 		$subcol = 0;
 		if ( is_active_sidebar( 'subfooter-1' ) ) { $subcol++; }
 		if ( is_active_sidebar( 'subfooter-2' ) ) { $subcol++; }
 		if ( is_active_sidebar( 'subfooter-3' ) ) { $subcol++; }
 		$subcol = 'col-' . $subcol;
+		*/
 
 		if ( 0 < $col ) {
 			$border = '';
-			if ( 0 < $subcol ) { $border = ' include-subfooter'; }
+			// if ( 0 < $subcol ) { $border = ' include-subfooter'; }
 
 			echo '<section class="footer-widget-container ' . $col . $border . '">';
 
@@ -53,6 +55,7 @@
 
 		}
 
+		/*
 		if ( 0 < $subcol ) {
 
 			echo '<section class="subfooter-widget-container ' . $subcol . '">';
@@ -78,7 +81,7 @@
 			echo '</section>';
 
 		}
-
+		*/
 		?>
 
 		<?php /*
@@ -93,6 +96,9 @@
 		</div><!-- .site-info -->
 		*/ ?>
 	</footer><!-- #colophon -->
+	<div id="subfooter">
+		<a href="https://afflectomm.com"><img src="<?php echo get_stylesheet_directory_uri() . '/inc/img/DK-Managed-by-300x61.png'; ?>" alt="managed by Afflecto Media Marketing" /></a>
+	</div>
 </div><!-- .site-footer-wrap -->
 </div><!-- #page -->
 
