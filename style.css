@@ -371,14 +371,15 @@ button:active,
 .site-footer-wrap {
 	position: relative;
 	background: var(--gold);
-	margin-top: calc( var(--gap) + 35px);
+	margin-top: calc( var(--gap) + 29px);
 }
 .site-footer-wrap:before {
 	content: '';
 	position: absolute;
 	background: transparent url(inc/img/footer-swoosh.png) no-repeat;
 	background-position: top right;
-	top: -35px;
+	background-size: 600px;
+	top: -28.8px;
 	right: 0;
 	height: 100%;
 	width: 100%;
