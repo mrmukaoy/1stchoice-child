@@ -11,9 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-header-wrap">
-			<header class="entry-header">
-				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			</header><!-- .entry-header -->
+		<header class="entry-header">
+			<h1 class="entry-title"><?php echo yo_baselayerpage_title(); ?></h1>
+		</header><!-- .entry-header -->
 	</div><!-- .entry-header-wrap -->
 
 	<?php yo_baselayerpost_thumbnail(); ?>

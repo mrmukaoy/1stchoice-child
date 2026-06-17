@@ -85,6 +85,7 @@ function yo_baselayerentry_footer() {
 		$the_cats = get_the_category();
 		// if "uncategorized" is one of the categories, excise it from the array
 		// there's gotta be a more streamlined way to do this
+		/*
 		if ( !empty( $the_cats ) ) {
 
 			$svg = include( 'img/icon-check-w-bg-svg.php' );
@@ -123,6 +124,7 @@ function yo_baselayerentry_footer() {
 
 			echo '<span class="tags-links">' . $svg . $tags_list . '</span>';
 		}
+		*/
 	}
 
 	/*
@@ -157,4 +159,39 @@ function yo_baselayerentry_footer() {
 	'<span class="edit-link">',
 	'</span>'
 	);
+}
+
+
+/** Prints HTML with meta information for the categories, tags and comments. */
+function yo_baselayerpage_title() {
+	$title        = '';
+	$pageid       = '';
+	$parentid     = '';
+	$gparentid    = '';
+	$parent_title = '';
+
+	if ( is_home() ) {
+		$pageid = get_option( 'page_for_posts' );
+	} else {
+		$pageid = get_the_ID();
+	}
+	$title = wp_kses_post( get_the_title( $pageid ) );
+
+	// Does page have a parent?
+	if ( has_post_parent( $pageid ) ) {
+		$parentid = wp_get_post_parent_id( $pageid );
+		$parent_title = get_the_title( $parentid );
+
+		// What about a grandparent??
+		if ( has_post_parent( $parentid ) ) {
+			$gparentid = wp_get_post_parent_id( $parentid );
+			$parent_title = get_the_title( $gparentid );
+		}
+	}
+
+	if ( '' != $parent_title) {
+		$title = $parent_title . ' <span class="page-title-separator">&nbsp; ><br></span> ' . $title;
+	}
+
+	return $title;
 }

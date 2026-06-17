@@ -15,25 +15,16 @@
 get_header();
 ?>
 	<main id="primary" class="site-main">
+		<div class="entry-header-wrap">
+			<header class="entry-header">
+				<h1 class="entry-title"><?php echo yo_baselayerpage_title(); ?></h1>
+			</header><!-- .entry-header -->
+		</div><!-- .entry-header-wrap -->
+
 		<?php
-		if ( have_posts() ) {
+		if ( have_posts() ) { ?>
 
-			$front_page_title = '';
-			if ( is_front_page() ) {
-				$front_page_title = ' screen-reader-text';
-			}
-			if ( ! is_front_page() ) {
-				?>
-				<div class="page-header-wrap">
-					<div class="entry-header-wrap-decoration"></div>
-					<header class="page-header">
-						<h1 class="page-title<?php echo $front_page_title; ?>"><?php single_post_title(); ?></h1>
-					</header>
-				</div>
-				<?php
-			} //endif; ?>
-
-		<section class="meat-potatoes">
+			<section class="meat-potatoes">
 
 		<?php /* Start the Loop */
 			while ( have_posts() ) {
@@ -44,11 +35,7 @@ get_header();
 				* If you want to override this in a child theme, then include a file
 				* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				*/
-				if ( '' != get_post_format() && 'standard' != get_post_format() ) {
-					get_template_part( 'template-parts/format', get_post_format() );
-				} else {
-					get_template_part( 'template-parts/content', get_post_type() );
-				}
+				get_template_part( 'template-parts/content', get_post_type() );
 
 			} //endwhile;
 

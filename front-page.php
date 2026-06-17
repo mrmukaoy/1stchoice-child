@@ -17,7 +17,7 @@ get_header();
 
 	<section id="content" class="site-content page-full">
 		<header class="page-header">
-			<?php get_template_part( 'template-parts/archive-header' ); ?>
+			<h1 class="entry-title screen-reader-text"><?php echo yo_baselayerpage_title(); ?></h1>
 		</header><!-- .page-header -->
 
 		<main id="primary" class="site-main">

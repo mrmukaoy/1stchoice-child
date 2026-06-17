@@ -14,6 +14,7 @@
 
 get_header();
 
+/*
 $subnav = baselayer_child_get_sidebar_nav();
 
 if ( $subnav === '' || $subnav === false ) { 
@@ -24,7 +25,7 @@ if ( $subnav === '' || $subnav === false ) {
 		<div class="page-header-wrap">
 
 			<header class="page-header">
-				<?php get_template_part( 'template-parts/archive-header' ); ?>
+				<h1 class="entry-title"><?php echo yo_baselayerpage_title(); ?></h1>
 			</header><!-- .page-header -->
 
 		</div>
@@ -39,12 +40,13 @@ if ( $subnav === '' || $subnav === false ) {
 		</header><!-- .page-header -->
 
 	</div>
+	<?php /*
 	<section id="content" class="site-content w-sidebar">
 
 
-<?php }
+<?php /* }
 // continue with page HTML
-?>
+*/ ?>
 
 		<main id="primary" class="site-main">
 			<!-- <section class="meat-potatoes"> -->
