@@ -562,3 +562,25 @@ button:active,
 		}
 	}
 }
+
+/* HOME */
+.home-hero {
+	position: relative;
+}
+.home-hero-tag {
+	position: absolute;
+	top: 0;
+	left: 3rem;
+	width: 22rem !important;
+	background: rgba( 65, 65, 65, 0.9 );
+	color: var(--white);
+
+	.wp-block-group__inner-container {
+		padding: calc( 1.5 * var(--gap)) var(--gap) var(--gap);
+	}
+
+	.wp-block-button__link {
+		border: 1px solid var(--blue);
+		background: var(--red);
+	}
+}

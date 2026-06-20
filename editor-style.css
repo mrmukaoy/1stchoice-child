@@ -5,6 +5,7 @@
 :root {
 	--black:        #000000;
 	--red:          #c2181a;
+	--blue:         #0d94ff;
 	--gold:         #e5c249;
 	--grey:         #676767;
 	--grey-vdark:   #2f2f2f;
@@ -21,7 +22,7 @@
 	--button-border-color: transparent;
 	--button-border-color-hover: transparent;
 	--error:      var(--red);
-	--info:       #5057ba;
+	--info:       var(--blue);
 	--success:    var(--green);
 
 	--border-radius: 10px;
@@ -31,7 +32,19 @@
 	font-family: sans-serif;
 }
 
-.block-editor-block-list__layout .block-editor-block-list__block.big-red-box {
+:root :where(.wp-element-button, .wp-block-button__link) {
+	background: var(--grey-dark);
+	color: var(--white);
+	border-radius: var(--border-radius);
+	border: 2px solid var(--blue);
+}
+
+.block-editor-block-list__layout .block-editor-block-list__block.home-hero-tag {
+	background: var(--grey-dark);
+	color: var(--white)
+}
+
+	.block-editor-block-list__layout .block-editor-block-list__block.big-red-box {
 	background: var(--red);
 	color: var(--white);
 	padding-top: 1rem;
