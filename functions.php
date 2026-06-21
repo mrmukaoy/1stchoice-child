@@ -150,6 +150,7 @@ function firstchoice_more_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	/*
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Subfooter 2', 'firstchoice' ),
@@ -172,8 +173,9 @@ function firstchoice_more_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+	*/
 }
-// add_action( 'widgets_init', 'firstchoice_more_widgets_init' );
+add_action( 'widgets_init', 'firstchoice_more_widgets_init' );
 
 /** Custom template tags for this theme. */
 require get_stylesheet_directory() . '/inc/template-tags.php';

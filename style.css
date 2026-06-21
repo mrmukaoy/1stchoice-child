@@ -65,8 +65,7 @@ Version:     1.0.0
 /* STRUCTURE */
 :root {
 	--aligndefault: 965px;
-	/* --alignwide: 1460px; */
-	--alignwide: 1200px;
+	--alignwide: 1460px;
 }
 @media screen and (min-width: 965px) {
 	:root {
@@ -169,6 +168,9 @@ ul:not(.alignwide):not(.alignfull) {
 	}
 }
 
+.site-header .site-branding {
+	padding: 0;
+}
 .site-branding {
 	display: flex;
 	flex-direction: row;
@@ -371,17 +373,20 @@ button:active,
 	position: absolute;
 	background: transparent url(inc/img/footer-swoosh.png) no-repeat;
 	background-position: top right;
-	background-size: 600px;
-	top: -28.8px;
+	background-size: 260px;
+	top: -12.5px;
 	right: 0;
 	height: 100%;
 	width: 100%;
 }
+/*
 .site-footer {
 	padding-right: 15%;
 }
+*/
 .footer-widget-container {
 	color: var(--grey-dark);
+	justify-content: flex-start;
 
 	.widget-title {
 		font-size: var(--font-size-1);
@@ -392,6 +397,7 @@ button:active,
 		list-style-type: none;
 		padding-left: 0;
 		margin-bottom: 0;
+		columns: 2;
 
 		li {
 			margin-bottom: 0.5em;
@@ -400,6 +406,8 @@ button:active,
 	a {
 		color: var(--grey-dark);
 		text-decoration: none;
+		font-weight: 700;
+		text-transform: uppercase;
 	}
 	a:hover,
 	a:focus,
@@ -414,6 +422,9 @@ button:active,
 .footer-widget-container div.widget-area:not(.alignfull):not(.alignwide) {
 	width: calc( 33% - (2 * var(--gap)));
 }
+.footer-widget-container.col-2 .footer-2 {
+	width: 50% !important;
+}
 .footer-widget-container.include-subfooter {
 	border-bottom: 1px solid var(--grey-light);
 }
@@ -425,7 +436,7 @@ button:active,
 	}
 }
 
-#subfooter {
+#site-info {
 	width:100%;
 	background: var(--grey-dark);
 	color: var(--white);
@@ -566,21 +577,39 @@ button:active,
 /* HOME */
 .home-hero {
 	position: relative;
+
+	.wp-block-image {
+		margin-top: 0;
+	}
 }
 .home-hero-tag {
 	position: absolute;
 	top: 0;
-	left: 3rem;
+	left: 5rem;
 	width: 22rem !important;
 	background: rgba( 65, 65, 65, 0.9 );
 	color: var(--white);
+	margin-bottom: 0;
 
 	.wp-block-group__inner-container {
 		padding: calc( 1.5 * var(--gap)) var(--gap) var(--gap);
 	}
 
+	.wp-block-heading {
+		font-size: var(--font-size-2);
+		font-weight: 400;
+		margin-top: 0;
+	}
+
 	.wp-block-button__link {
 		border: 1px solid var(--blue);
 		background: var(--red);
+	}
+}
+@media screen and (max-width:650px) {
+	.home-hero-tag {
+		position: relative;
+		width: 100% !important;
+		left: 0;
 	}
 }

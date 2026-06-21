@@ -19,13 +19,11 @@
 		if ( is_active_sidebar( 'footer-3' ) ) { $col++; }
 		$col = 'col-' . $col;
 
-		/*
 		$subcol = 0;
 		if ( is_active_sidebar( 'subfooter-1' ) ) { $subcol++; }
 		if ( is_active_sidebar( 'subfooter-2' ) ) { $subcol++; }
 		if ( is_active_sidebar( 'subfooter-3' ) ) { $subcol++; }
 		$subcol = 'col-' . $subcol;
-		*/
 
 		if ( 0 < $col ) {
 			$border = '';
@@ -55,7 +53,6 @@
 
 		}
 
-		/*
 		if ( 0 < $subcol ) {
 
 			echo '<section class="subfooter-widget-container ' . $subcol . '">';
@@ -79,24 +76,11 @@
 			}
 
 			echo '</section>';
-
 		}
-		*/
 		?>
 
-		<?php /*
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ammparent' ) ); ?>">
-				<?php printf( esc_html__( 'Proudly powered by %s', 'ammparent' ), 'WordPress' ); ?>
-			</a>
-			<span class="sep"> | </span>
-			<?php
-			printf( esc_html__( 'Theme: %1$s by %2$s.', 'ammparent' ), 'ammparent', '<a href="https://afflectomm.com">Martin</a>' );
-			?>
-		</div><!-- .site-info -->
-		*/ ?>
 	</footer><!-- #colophon -->
-	<div id="subfooter">
+	<div id="site-info">
 		<a href="https://afflectomm.com"><img src="<?php echo get_stylesheet_directory_uri() . '/inc/img/DK-Managed-by-300x61.png'; ?>" alt="managed by Afflecto Media Marketing" /></a>
 	</div>
 </div><!-- .site-footer-wrap -->
