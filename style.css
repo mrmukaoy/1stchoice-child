@@ -321,6 +321,13 @@ button:active,
 .wp-block-button__link:active {
 	background: var(--grey-dark);
 }
+.wp-block-button.red .wp-block-button__link {
+	background: var(--red);
+}
+.wp-block-button.red .wp-block-button__link:hover,
+.wp-block-button.red .wp-block-button__link:focus {
+	background: var(--link-hover-color);
+}
 
 /* NAVIGATION */
 .main-navigation ul.nav-menu {
@@ -629,4 +636,12 @@ button:active,
 		max-height: 100px;
 		max-width: 200px;
 	}
+}
+
+/* WHITE-TO-GREY-DIENT */
+.white-to-grey-dient {
+	padding-top: calc( 2 * var(--gap) );
+	padding-bottom: calc( 2 * var(--gap) );
+	background: var(--grey-light);
+	background: linear-gradient(180deg, var(--grey-light) 25%, var(--white) 75%);
 }
