@@ -422,6 +422,10 @@ button:active,
 .footer-widget-container div.widget-area:not(.alignfull):not(.alignwide) {
 	width: calc( 33% - (2 * var(--gap)));
 }
+.footer-widget-container .widget .wp-block-image {
+	margin-top: 0;
+	margin-bottom: 0;
+}
 .footer-widget-container.col-2 .footer-2 {
 	width: 50% !important;
 }
@@ -611,5 +615,18 @@ button:active,
 		position: relative;
 		width: 100% !important;
 		left: 0;
+	}
+}
+
+/* LOGO WALL */
+.logo-wall-icons {
+	margin-top: calc( 2 * var(--gap) );
+	gap: calc( 2 * var(--gap) );
+
+	img {
+		height: auto;
+		width: auto;
+		max-height: 100px;
+		max-width: 200px;
 	}
 }
