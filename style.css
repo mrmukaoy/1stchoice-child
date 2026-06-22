@@ -65,14 +65,25 @@ Version:     1.0.0
 /* STRUCTURE */
 :root {
 	--aligndefault: 965px;
-	--alignwide: 1460px;
+	--alignwide: 1300px;
 }
 @media screen and (min-width: 965px) {
 	:root {
 		--page-margin: calc( 2 * 21.28px );
 	}
 }
-
+@media screen and (max-width: 1300px) {
+	.alignwide {
+		padding-left: var(--page-margin);
+		padding-right: var(--page-margin);
+	}
+}
+@media screen and (min-width: 1301px) and (max-width: 1546.24px) {
+	.alignwide {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
 
 .has-black-color { color: var(--black) !important; }
 .has-blue-color  { color: var(--blue) !important; }
@@ -95,6 +106,10 @@ Version:     1.0.0
 @media screen and (max-width:768px) {
 	.has-extra-large-font-size { font-size: var(--font-size-1) !important; }
 	.has-extra-extra-large-font-size { font-size: var(--font-size-2) !important; }
+}
+
+body {
+	color: var(--text);
 }
 
 .single .page-content > :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(strong):not(em):not(ol):not(ul):not(hr):not(.wp-block-quote), .page .page-content > :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(strong):not(em):not(ol):not(ul):not(hr):not(.wp-block-quote), .single .entry-content > :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(strong):not(em):not(ol):not(ul):not(hr):not(.wp-block-quote), .page .entry-content > :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(strong):not(em):not(ol):not(ul):not(hr):not(.wp-block-quote), .single .entry-summary > :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(strong):not(em):not(ol):not(ul):not(hr):not(.wp-block-quote), .page .entry-summary > :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(strong):not(em):not(ol):not(ul):not(hr):not(.wp-block-quote) {
@@ -545,17 +560,30 @@ button:active,
 
 /* WE PUT YOU 1ST SECTION */
 .put-you-1st-section {
-	background: var(--grey-dark);
-	color: var(--white);
+	position: relative;
+	background: var(--grey-dark) url(inc/img/shingles.jpg) no-repeat;
+	background-size: cover;
 	padding-top: calc( 2 * var(--page-margin));
 	padding-bottom: calc( 2 * var(--page-margin));
 }
+.put-you-1st-section:before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: var(--grey-dark);
+	opacity: 0.75;
+}
 .put-you-1st-section > .wp-block-group__inner-container {
+	position: relative;
 	max-width: var(--alignwide);
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: var(--page-margin);
 	padding-right: var(--page-margin);
+	z-index: 10;
 }
 .put-you-1st-heading {
 	color: var(--white);
@@ -579,39 +607,40 @@ button:active,
 }
 .services-grid {
 	gap: calc( 1.5 * var(--gap));
+	align-items: stretch;
 	margin-top: calc( 1.5 * var(--gap));
 	margin-bottom: calc( 1.5 * var(--gap));
 }
 .service-item {
-	width: clamp( 160px, calc( 20% - var(--gap)), 220px);
+	width: clamp( 160px, calc( 20% - (1.5 * var(--gap))), 220px) !important;
 	text-align: center;
+	background: var(--grey-light);
+	border-radius: var(--border-radius);
+	padding: 0 var(--gap) var(--gap);
 }
 .service-icon {
-	width: 64px;
+	width: 64px !important;
 	height: 64px;
 	margin: 0 auto calc( var(--gap) / 2 );
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: var(--grey-vlight);
-	border-radius: 6px;
 	color: var(--grey-dark);
 }
 .service-title {
-	font-size: var(--font-size-sm);
-	color: var(--white);
+	/* font-size: var(--font-size-sm); */
+	color: var(--grey-dark);
 	text-transform: uppercase;
 	margin-top: 0;
 	margin-bottom: calc( var(--gap) / 3 );
 }
 .service-desc {
 	font-size: var(--font-size-sm);
-	color: var(--grey-light);
+	color: var(--grey-dark);
 	margin-bottom: 0;
 }
 .free-inspection-btn .wp-block-button__link {
 	background: var(--red);
-	border-color: var(--red);
 }
 
 /* WARRANTY & INSURANCE SECTIONS */
@@ -623,6 +652,11 @@ button:active,
 	padding-top: calc( 2 * var(--gap));
 	padding-bottom: calc( 2 * var(--gap));
 	gap: calc( 2 * var(--gap));
+	align-items: stretch !important;
+
+	h3 {
+		margin-top: 0;
+	}
 }
 .warranty-text,
 .insurance-text {
@@ -631,6 +665,7 @@ button:active,
 .warranty-images {
 	flex: 1 1 420px;
 	gap: var(--gap);
+	align-items: stretch;
 }
 .warranty-images .wp-block-image,
 .insurance-image {
@@ -644,11 +679,6 @@ button:active,
 }
 .insurance-image {
 	flex: 0 0 320px;
-}
-.warranty-btn .wp-block-button__link,
-.insurance-btn .wp-block-button__link {
-	background: var(--grey-dark);
-	border-color: var(--grey-dark);
 }
 @media screen and (max-width: 781px) {
 	.warranty-section,
@@ -705,6 +735,7 @@ button:active,
 /* HOME */
 .home-hero {
 	position: relative;
+	margin-bottom: 0;
 
 	.wp-block-image {
 		margin-top: 0;
@@ -713,7 +744,7 @@ button:active,
 .home-hero-tag {
 	position: absolute;
 	top: 0;
-	left: 5rem;
+	left: 8rem;
 	width: 22rem !important;
 	background: rgba( 65, 65, 65, 0.9 );
 	color: var(--white);

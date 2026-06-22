@@ -65,8 +65,8 @@ function firstchoice_pattern_we_put_you_first() {
 
 	ob_start();
 	?>
-<!-- wp:group {"className":"put-you-1st-section alignfull","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull put-you-1st-section">
+<!-- wp:group {"className":"put-you-1st-section alignwide","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignwide put-you-1st-section">
 	<div class="wp-block-group__inner-container">
 
 		<!-- wp:heading {"textAlign":"center","level":2,"className":"put-you-1st-heading"} -->
@@ -98,7 +98,7 @@ function firstchoice_pattern_we_put_you_first() {
 		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 		<div class="wp-block-buttons">
 			<!-- wp:button {"className":"free-inspection-btn"} -->
-			<div class="wp-block-button free-inspection-btn"><a class="wp-block-button__link wp-element-button" href="#">FREE ROOF INSPECTION</a></div>
+			<div class="wp-block-button free-inspection-btn red"><a class="wp-block-button__link wp-element-button" href="#">FREE ROOF INSPECTION</a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
@@ -113,13 +113,13 @@ function firstchoice_pattern_we_put_you_first() {
 function firstchoice_pattern_warranty_and_insurance() {
 	ob_start();
 	?>
-<!-- wp:group {"className":"warranty-section alignwide","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
-<div class="wp-block-group alignwide warranty-section">
+<!-- wp:group {"className":"warranty-section","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+<div class="wp-block-group warranty-section">
 
 	<!-- wp:group {"className":"warranty-text","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group warranty-text">
 		<!-- wp:heading {"level":3} -->
-		<h3 class="wp-block-heading">BACKED BY OUR WORKMANSHIP WARRANTY</h3>
+		<h3 class="wp-block-heading">Backed by Our Workmanship Warranty</h3>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph -->
@@ -129,7 +129,7 @@ function firstchoice_pattern_warranty_and_insurance() {
 		<!-- wp:buttons -->
 		<div class="wp-block-buttons">
 			<!-- wp:button {"className":"warranty-btn"} -->
-			<div class="wp-block-button warranty-btn"><a class="wp-block-button__link wp-element-button" href="#">LEARN MORE ABOUT OUR WARRANTY</a></div>
+			<div class="wp-block-button warranty-btn"><a class="wp-block-button__link wp-element-button" href="#">Learn more about our warranty</a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
@@ -160,7 +160,7 @@ function firstchoice_pattern_warranty_and_insurance() {
 	<!-- wp:group {"className":"insurance-text","layout":{"type":"constrained"}} -->
 	<div class="wp-block-group insurance-text">
 		<!-- wp:heading {"level":3} -->
-		<h3 class="wp-block-heading">INSURANCE CLAIMS MADE SIMPLE</h3>
+		<h3 class="wp-block-heading">Insurance Claims Made Simple</h3>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph -->
@@ -187,7 +187,7 @@ function firstchoice_pattern_warranty_and_insurance() {
 		<!-- wp:buttons -->
 		<div class="wp-block-buttons">
 			<!-- wp:button {"className":"insurance-btn"} -->
-			<div class="wp-block-button insurance-btn"><a class="wp-block-button__link wp-element-button" href="#">BOOK MY FREE INSPECTION</a></div>
+			<div class="wp-block-button insurance-btn"><a class="wp-block-button__link wp-element-button" href="#">Book my free inspection</a></div>
 			<!-- /wp:button -->
 		</div>
 		<!-- /wp:buttons -->
