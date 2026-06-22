@@ -543,6 +543,123 @@ button:active,
 	}
 }
 
+/* WE PUT YOU 1ST SECTION */
+.put-you-1st-section {
+	background: var(--grey-dark);
+	color: var(--white);
+	padding-top: calc( 2 * var(--page-margin));
+	padding-bottom: calc( 2 * var(--page-margin));
+}
+.put-you-1st-section > .wp-block-group__inner-container {
+	max-width: var(--alignwide);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--page-margin);
+	padding-right: var(--page-margin);
+}
+.put-you-1st-heading {
+	color: var(--white);
+	text-align: center;
+	margin-top: 0;
+}
+.put-you-1st-heading .badge-1st {
+	display: inline-block;
+	background: var(--red);
+	color: var(--white);
+	padding: 0.1em 0.4em;
+	border-radius: 4px;
+	text-transform: none;
+}
+.put-you-1st-sub {
+	max-width: var(--aligndefault);
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: var(--white);
+}
+.services-grid {
+	gap: calc( 1.5 * var(--gap));
+	margin-top: calc( 1.5 * var(--gap));
+	margin-bottom: calc( 1.5 * var(--gap));
+}
+.service-item {
+	width: clamp( 160px, calc( 20% - var(--gap)), 220px);
+	text-align: center;
+}
+.service-icon {
+	width: 64px;
+	height: 64px;
+	margin: 0 auto calc( var(--gap) / 2 );
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--grey-vlight);
+	border-radius: 6px;
+	color: var(--grey-dark);
+}
+.service-title {
+	font-size: var(--font-size-sm);
+	color: var(--white);
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: calc( var(--gap) / 3 );
+}
+.service-desc {
+	font-size: var(--font-size-sm);
+	color: var(--grey-light);
+	margin-bottom: 0;
+}
+.free-inspection-btn .wp-block-button__link {
+	background: var(--red);
+	border-color: var(--red);
+}
+
+/* WARRANTY & INSURANCE SECTIONS */
+.warranty-section,
+.insurance-section {
+	max-width: var(--alignwide);
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: calc( 2 * var(--gap));
+	padding-bottom: calc( 2 * var(--gap));
+	gap: calc( 2 * var(--gap));
+}
+.warranty-text,
+.insurance-text {
+	flex: 1 1 380px;
+}
+.warranty-images {
+	flex: 1 1 420px;
+	gap: var(--gap);
+}
+.warranty-images .wp-block-image,
+.insurance-image {
+	margin: 0;
+}
+.warranty-images img,
+.insurance-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.insurance-image {
+	flex: 0 0 320px;
+}
+.warranty-btn .wp-block-button__link,
+.insurance-btn .wp-block-button__link {
+	background: var(--grey-dark);
+	border-color: var(--grey-dark);
+}
+@media screen and (max-width: 781px) {
+	.warranty-section,
+	.insurance-section {
+		flex-direction: column;
+	}
+	.insurance-section {
+		flex-direction: column-reverse;
+	}
+}
+
 /* TESTIMONIALS SECTION (NOT PAGE) */
 .testimonials-section {
 	background: var(--grey-light);
