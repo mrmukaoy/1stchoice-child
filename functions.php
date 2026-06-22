@@ -254,6 +254,9 @@ add_filter( 'excerpt_more', 'firstchoice_excerpt_link_text', 999 );
 /** Secondary navigation traversal feature. */
 require get_template_directory() . '/inc/subnav-walker-class.php';
 
+/** Custom block patterns for this theme. */
+require get_stylesheet_directory() . '/inc/block-patterns.php';
+
 
 /*
 function yo_firstchoice_post_thumbnail() {
