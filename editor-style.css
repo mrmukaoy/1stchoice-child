@@ -76,7 +76,8 @@
 	border-bottom: 5px solid var(--link-hover-color);
 	background: rgba( 194, 24, 26, 0.4 );
 }
-.block-editor-block-list__layout .block-editor-block-list__block.wp-block-group.grey-vdark-bg {
+.block-editor-block-list__layout .block-editor-block-list__block.wp-block-group.grey-vdark-bg,
+.block-editor-block-list__layout .block-editor-block-list__block.wp-block-group.grey-dark-bg {
 	border-top: 5px solid var(--grey-vdark);
 	border-bottom: 5px solid var(--grey-vdark);
 	background: var(--grey-vlight);
@@ -85,4 +86,14 @@
 	border-top: 5px solid var(--grey);
 	border-bottom: 5px solid var(--grey);
 	background: var(--grey-vlight);
+}
+
+/* DEFINITION LIST BLOCKS */
+.block-editor-block-list__layout .wp-block-simple-definition-list-blocks-list {
+	border-left: 0.5rem solid var(--grey-light);
+	padding-left: 0.5rem;
+}
+.block-editor-block-list__layout .wp-block-simple-definition-list-blocks-term {
+	font-weight: bold;
+	background-color: var(--grey-light);
 }
