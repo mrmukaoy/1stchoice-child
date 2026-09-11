@@ -1562,6 +1562,15 @@ div.trust-badge:not(.alignfull):not(.alignwide) {
 		}
 	}
 }
+
+.cards.w-border .wp-block-group .wp-block-group,
+.cards2.w-border .wp-block-group .wp-block-group,
+.cards4.w-border .wp-block-group .wp-block-group {
+	border: none;
+	padding: unset;
+	background: transparent;
+}
+
 .cards.vdark,
 .cards2.vdark,
 .cards4.vdark {
