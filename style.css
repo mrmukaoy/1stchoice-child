@@ -196,6 +196,7 @@ article.page .entry-footer {
 
 .site-header .site-branding {
 	padding: 0;
+	max-width: 300px;
 }
 .site-branding {
 	display: flex;
