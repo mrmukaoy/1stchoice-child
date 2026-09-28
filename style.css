@@ -112,6 +112,10 @@ body {
 	color: var(--text);
 }
 
+.wp-block-group.alignfull.has-background {
+	margin-bottom: 0;
+}
+
 .single .page-content > :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(strong):not(em):not(ol):not(ul):not(hr):not(.wp-block-quote), .page .page-content > :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(strong):not(em):not(ol):not(ul):not(hr):not(.wp-block-quote), .single .entry-content > :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(strong):not(em):not(ol):not(ul):not(hr):not(.wp-block-quote), .page .entry-content > :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(strong):not(em):not(ol):not(ul):not(hr):not(.wp-block-quote), .single .entry-summary > :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(strong):not(em):not(ol):not(ul):not(hr):not(.wp-block-quote), .page .entry-summary > :not(.alignfull):not(.alignwide):not(.alignleft):not(.alignright):not(strong):not(em):not(ol):not(ul):not(hr):not(.wp-block-quote),
 .single .page-content > ul.wp-block-list,
 .page .page-content > ul.wp-block-list,
@@ -1569,6 +1573,14 @@ div.trust-badge:not(.alignfull):not(.alignwide) {
 		padding: calc( var(--gap) / 2 ) calc( var(--gap) / 2 ) var(--gap);
 	}
 }
+
+.cards.w-left-icon > .wp-block-group > .wp-block-group__inner-container,
+.cards2.w-left-icon > .wp-block-group > .wp-block-group__inner-container {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
 .cards.w-border > .wp-block-group,
 .cards2.w-border > .wp-block-group,
 .cards4.w-border > .wp-block-group {
@@ -1684,6 +1696,33 @@ ul.checkmarks.no-cols {
 		}
 	}
 }
+/* STORM DAMAGE "RED" CARDS SECTION */
+.storm-damage.red-cards.wp-block-group {
+	background: var(--grey-dark) url(inc/img/storm-bg.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	h2 {
+		border-top: none;
+		border-bottom: none;
+		text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.4);
+	}
+
+	.cards > .wp-block-group {
+		background: var(--red);
+		color: var(--white);
+		box-shadow: 14px 14px 15px 2px rgba(0, 0, 0, 0.4);
+		padding: var(--gap) calc( 2 * var(--gap) ) calc( 2 * var(--gap) );
+
+		h3 {
+			text-align: center;
+			color: var(--white);
+			margin-top: 1rem;
+		}
+	}
+
+}
+
 /* GREY VDARK SECTION */
 .grey-vdark-bg {
 	background: var(--grey-vdark);
@@ -1719,6 +1758,28 @@ ul.checkmarks.no-cols {
 	}
 	a, a:hover, a:focus {
 		color: var(--white) !important;
+	}
+
+	.storm-damage.repair-experts {
+		text-align: center;
+		color: var(--white);
+
+		h3 {
+			position: relative;
+			margin: var(--gap) 0 0;
+			padding-left: var(--gap);
+			display: inline-block;
+			width: auto;
+		}
+		h3:before {
+			content: '✓';
+			color: var(--link-color);
+			font-weight: bold;
+			font-size: var(--font-size-1);
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
 	}
 }
 .grey-vdark-bg.left-align {
@@ -1766,6 +1827,14 @@ ul.checkmarks.no-cols {
 		}
 }
 
+h2.red-border {
+	border-top: 3px solid var(--red);
+	border-bottom: 3px solid var(--red);
+	max-width: 40rem !important;
+	padding: 0.5rem 2rem;
+}
+
+
 .img-separator {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -1778,6 +1847,9 @@ ul.checkmarks.no-cols {
 		object-fit: cover;
 		height: 100% !important;
 	}
+}
+.img-separator.large231 {
+	height: 231px;
 }
 
 .inset {
