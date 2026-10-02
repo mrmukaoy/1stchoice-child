@@ -1862,3 +1862,35 @@ h2.red-border {
 		color: var(--white);
 	}
 }
+
+.manufacturers-strip {
+	flex-wrap: wrap !important;
+	gap: calc( 2 * var(--gap));
+}
+
+.services-main.at-a-glance {
+	padding: var(--gap);
+	border-radius: var(--border-radius);
+
+	.checkmarks.no-cols {
+		padding-left: 1rem !important;
+
+		li:not(:last-child) {
+			padding-bottom: calc( var(--gap) / 2 );
+			border-bottom: 1px solid var(--grey-light);
+		}
+	}
+}
+.services-main.warranty-cols > .wp-block-column {
+	padding: var(--gap);
+	border: 3px solid var(--gold);
+	border-radius: var(--border-radius);
+
+	.circle-markers {
+
+		li {
+		}
+		li::marker {
+		}
+	}
+}
