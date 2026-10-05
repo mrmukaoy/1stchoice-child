@@ -1894,3 +1894,111 @@ h2.red-border {
 		}
 	}
 }
+.grey-vdark-bg .services-main.cards2 > .wp-block-group {
+	background: var(--white);
+	color: var(--text);
+	border-radius: var(--border-radius);
+	padding: 0;
+
+	h3 {
+		color: var(--grey-vdark);
+	}
+
+	a {
+		color: var(--link-color) !important;
+	}
+}
+.services-main.cards2.w-pics > .wp-block-group {
+	.wp-block-image {
+		margin: 0;
+		border-bottom: 5px solid var(--red);
+		height: 190px;
+
+		img {
+			border-radius: var(--border-radius) var(--border-radius) 0 0;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+}
+.services-main.cards2 .content-group {
+	padding: var(--gap) var(--gap) calc( 1.5 * var(--gap));
+
+	h4 {
+		font-size: var(--font-size-0);
+		font-weight: 700;
+		color: var(--grey);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: calc( var(--gap) / 2 );
+	}
+
+	.pills {
+		list-style-type: none;
+		padding-left: 0;
+
+		li {
+			display: inline-block;
+			background-color: var(--white);
+			border: 1px solid var(--red);
+			padding: 0.5rem 1rem;
+			line-height: 1;
+			border-radius: 1rem;
+		}
+		li:hover,
+		li:focus {
+			background-color: var(--grey-vlight);
+		}
+
+		a {
+			position: relative;
+			padding-left: 1rem;
+			text-decoration: none;
+		}
+		a:before {
+			content: '✓';
+			position: absolute;
+			height: 1rem;
+			width: 1rem;
+			top: 0.25rem;
+			left: 0;
+			color: var(--red);
+		}
+	}
+}
+@media screen and (min-width:900px) {
+	.services-main.cards2.w-pics > .wp-block-group.horiz {
+		display: flex;
+		flex-direction: row;
+		gap: 0;
+
+		.wp-block-image {
+			width: 195px;
+			height: 100%;
+			border-right: 5px solid var(--red);
+			border-bottom: none;
+
+			img {
+				border-radius: var(--border-radius) 0 0 var(--border-radius);
+			}
+		}
+
+		.content-group {
+			width: calc( 100% - 200px);
+		}
+	}
+}
+.services-main.why-choose {
+
+	.cards > .wp-block-group {
+		background: var(--grey-dark);
+		border: 1px solid var(--grey);
+
+		p {
+			color: white;
+			text-align: center;
+			margin-bottom: calc( var(--gap) / 2 );
+		}
+	}
+}
