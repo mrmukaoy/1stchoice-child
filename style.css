@@ -673,12 +673,13 @@ button:active,
 	text-align: center;
 	margin-top: 0;
 }
-.put-you-1st-heading .badge-1st {
+.put-you-1st-heading .badge-1st,
+.badge-1st {
 	display: inline-block;
 	background: var(--red);
 	color: var(--white);
 	padding: 0.1em 0.4em;
-	border-radius: 4px;
+	border-radius: calc( var(--border-radius) / 2 );
 	text-transform: none;
 }
 .put-you-1st-sub {
