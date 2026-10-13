@@ -549,9 +549,10 @@ button:active,
 }
 
 .wp-block-group.is-layout-flex.cards.grey > .wp-block-group {
-	background: var(--grey);
+	background: var(--grey-vdark);
 	color: var(--white);
-	border: 3px solid var(--grey-vdark);
+	border: 0 solid transparent;
+	transition: border-width 0.1s linear;
 
 	.wp-block-image {
 		margin: calc( -1 * var(--gap))  calc( -1 * var(--gap)) var(--gap);
@@ -567,6 +568,8 @@ button:active,
 .wp-block-group.is-layout-flex.cards.grey > .wp-block-group:focus {
 	background: var(--grey-vlight);
 	color: var(--grey-dark);
+	border: 3px solid var(--link-color);
+	transition: border-width 0.1s linear;
 
 	h3 { color: var(--grey-vdark); }
 }
@@ -1851,7 +1854,9 @@ ul.checkmarks.no-cols {
 		> .wp-block-group {
 			background: var(--grey-vdark);
 			border-radius: var(--border-radius);
-			text-align: center;
+			border: 1px solid var(--blue);
+			align-items: flex-start;
+			gap: var(--gap);
 
 			.wp-block-image {
 				max-width: 66px;
@@ -2075,4 +2080,26 @@ h2.red-border {
 			margin-bottom: calc( var(--gap) / 2 );
 		}
 	}
+}
+
+.wp-block-simple-definition-list-blocks-list.residential-landing {
+	dt {
+		background: var(--grey-light);
+		padding: 1rem var(--gap);
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	dd {
+		background: var(--grey-vlight);
+		padding: 1rem calc( 3 * var(--gap)) 1rem calc( 2 * var(--gap));
+		margin: 0 0 var(--gap);
+	}
+	dd:before {
+		content: '';
+		display: none;
+	}
+}
+:root :where(.wp-block-image.is-style-rounded img, .wp-block-image .is-style-rounded img),
+.wp-block-image.is-style-rounded {
+	border-radius: var(--border-radius);
 }
