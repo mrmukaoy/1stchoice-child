@@ -81,7 +81,7 @@
 
 	</footer><!-- #colophon -->
 	<div id="site-info">
-		<a href="https://afflectomm.com"><img src="<?php echo get_stylesheet_directory_uri() . '/inc/img/DK-Managed-by-300x61.png'; ?>" alt="managed by Afflecto Media Marketing" /></a>
+		<a href="https://afflectomm.com"><img src="<?php echo get_stylesheet_directory_uri() . '/inc/img/wt-yellow-designed-by@1x-nopadding.png'; ?>" alt="designed by Afflecto Media Marketing" /></a>
 	</div>
 </div><!-- .site-footer-wrap -->
 </div><!-- #page -->

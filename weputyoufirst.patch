@@ -74,26 +74,31 @@ index 0000000..a4b7c99
 +		array(
 +			'icon'  => 'roof',
 +			'title' => __( 'Residential Roofing', 'firstchoice' ),
++			'link'  => __( 'https://google.com' ),
 +			'desc'  => __( 'Durable roof repairs, replacements, and maintenance to safeguard your home and improve long-term value.', 'firstchoice' ),
 +		),
 +		array(
 +			'icon'  => 'building',
 +			'title' => __( 'Commercial & Multi-Family Roofing', 'firstchoice' ),
++			'link'  => __( 'https://google.com' ),
 +			'desc'  => __( 'Professional installation and restoration for flat, metal, and specialty commercial systems that keep your business protected and operational.', 'firstchoice' ),
 +		),
 +		array(
 +			'icon'  => 'storm',
 +			'title' => __( 'Storm & Hail Damage Repair', 'firstchoice' ),
++			'link'  => __( 'https://google.com' ),
 +			'desc'  => __( 'Fast, dependable repairs after hail, wind, or extreme weather. We restore your property with precision and care.', 'firstchoice' ),
 +		),
 +		array(
 +			'icon'  => 'siding',
 +			'title' => __( 'Siding Maintenance', 'firstchoice' ),
++			'link'  => __( 'https://google.com' ),
 +			'desc'  => __( 'Quality siding options to elevate your home\'s appearance. We install and replace siding, ensuring your property looks great and stays protected year-round.', 'firstchoice' ),
 +		),
 +		array(
 +			'icon'  => 'gutter',
 +			'title' => __( 'Gutters & Exterior Services', 'firstchoice' ),
++			'link'  => __( 'https://google.com' ),
 +			'desc'  => __( 'Complete exterior improvement solutions to enhance protection, drainage, and curb appeal.', 'firstchoice' ),
 +		),
 +	);
@@ -116,10 +121,10 @@ index 0000000..a4b7c99
 +		<div class="wp-block-group services-grid">
 +		<?php foreach ( $services as $service ) : ?>
 +			<!-- wp:group {"className":"service-item","layout":{"type":"constrained"}} -->
-+			<div class="wp-block-group service-item">
++			<div class="wp-block-group service-item clickable-card">
 +				<div class="service-icon service-icon--<?php echo esc_attr( $service['icon'] ); ?>"><?php echo firstchoice_get_service_icon( $service['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput ?></div>
 +				<!-- wp:heading {"level":3,"className":"service-title"} -->
-+				<h3 class="wp-block-heading service-title"><?php echo esc_html( $service['title'] ); ?></h3>
++				<h3 class="wp-block-heading service-title"><a href="<?php echo esc_html( $service['link'] ); ?>"><?php echo esc_html( $service['title'] ); ?></a></h3>
 +				<!-- /wp:heading -->
 +				<!-- wp:paragraph {"className":"service-desc"} -->
 +				<p class="service-desc"><?php echo esc_html( $service['desc'] ); ?></p>
