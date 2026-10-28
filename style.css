@@ -202,6 +202,17 @@ article.page .entry-footer {
 	padding: 0;
 	max-width: 300px;
 }
+@media screen and (max-width:600px) {
+	.site-header .site-branding {
+		max-width: 50%;
+		min-height: 4rem;
+	}
+
+	.site-header .custom-logo {
+		max-width: 100%;
+	}
+}
+
 .site-branding {
 	display: flex;
 	flex-direction: row;
@@ -413,6 +424,12 @@ button:active,
 	height: 100%;
 	width: 100%;
 }
+@media screen and (max-width:450px) {
+	.site-footer-wrap {
+		padding-top: calc( 2 * var(--gap));
+	}
+}
+
 .site-footer {
 	position: relative;
 	z-index: 20;
@@ -450,6 +467,11 @@ button:active,
 	}
 
 }
+@media screen and (max-width:400px) {
+	.footer-widget-container .menu {
+		columns: unset;
+	}
+}
 .widget-wrapper .widget:last-child {
 	margin-bottom: 0;
 }
@@ -463,6 +485,13 @@ button:active,
 .footer-widget-container.col-2 .footer-2 {
 	width: 50% !important;
 }
+@media screen and (max-width:600px) {
+	.footer-widget-container.col-2 .footer-1,
+	.footer-widget-container.col-2 .footer-2 {
+		width: 100% !important;
+	}
+}
+
 .footer-widget-container.include-subfooter {
 	border-bottom: 1px solid var(--grey-light);
 }
@@ -489,7 +518,7 @@ button:active,
 	}
 
 	img {
-		width: auto;
+		width: 100%;
 		max-width: 300px;
 		margin: 0;
 		padding: 0;
@@ -1735,6 +1764,11 @@ ul.checkmarks.no-cols {
 		}
 	}
 }
+@media screen and (max-width:600px) {
+.red-cards.wp-block-group .cards > .wp-block-group {
+	width: 100%;
+}
+
 /* STORM DAMAGE "RED" CARDS SECTION */
 .storm-damage.red-cards.wp-block-group {
 	background: var(--grey-dark) url(inc/img/storm-bg.jpg) no-repeat;
@@ -2162,4 +2196,25 @@ h2.red-border {
 		border-radius: var(--border-radius);
 	}
 
+}
+
+.from-the-owner .wp-block-quote {
+	margin: 0 0 var(--gap);
+	padding: 0;
+
+	cite {
+		font-style: normal;
+	}
+}
+
+.the-team.cards4 .wp-block-group {
+	padding: 0 !important;
+
+	img {
+		border-radius: var(--border-radius);
+	}
+
+	p {
+		margin-bottom: 0;
+	}
 }
