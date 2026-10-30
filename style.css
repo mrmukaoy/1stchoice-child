@@ -1765,8 +1765,9 @@ ul.checkmarks.no-cols {
 	}
 }
 @media screen and (max-width:600px) {
-.red-cards.wp-block-group .cards > .wp-block-group {
-	width: 100%;
+	.red-cards.wp-block-group .cards > .wp-block-group {
+		width: 100%;
+	}
 }
 
 /* STORM DAMAGE "RED" CARDS SECTION */
@@ -1793,7 +1794,6 @@ ul.checkmarks.no-cols {
 			margin-top: 1rem;
 		}
 	}
-
 }
 
 /* GREY VDARK SECTION */
