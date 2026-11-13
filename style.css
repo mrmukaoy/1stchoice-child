@@ -468,6 +468,9 @@ button:active,
 
 }
 @media screen and (max-width:400px) {
+	.footer-widget-container {
+		flex-direction: column;
+	}
 	.footer-widget-container .menu {
 		columns: unset;
 	}
