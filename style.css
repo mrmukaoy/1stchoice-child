@@ -758,11 +758,16 @@ button:active,
 	margin-bottom: calc( 1.5 * var(--gap));
 }
 .service-item {
-	width: clamp( 160px, calc( 20% - (1.5 * var(--gap))), 220px) !important;
+	width: clamp( 200px, calc( 20% - (1.5 * var(--gap))), 220px) !important;
 	text-align: center;
 	background: var(--grey-light);
 	border-radius: var(--border-radius);
 	padding: var(--gap);
+}
+@media screen and (max-width:550px) {
+	.service-item {
+		width: 100% !important;
+	}
 }
 .service-icon {
 	width: 64px !important;
@@ -1583,6 +1588,10 @@ div.trust-badge:not(.alignfull):not(.alignwide) {
 	}
 }
 @media screen and (max-width:650px) {
+	.home-hero {
+		padding-left: 0;
+		padding-right: 0;
+	}
 	.home-hero-tag {
 		position: relative;
 		width: 100% !important;
