@@ -282,7 +282,7 @@ add_filter( 'body_class', 'firstchoice_location_body_class' );
 /* disable image srcset for specific image IDs */
 function disable_srcset_for_specific_images($sources, $size_array, $image_src, $image_meta, $attachment_id) {
 	// Array of targeted attachment IDs to disable srcset for
-	$excluded_ids = array(3705, 2666, 3833); 
+	$excluded_ids = array(2666, 3360, 3705, 3833); 
 
 	if (in_array($attachment_id, $excluded_ids)) {
 		return false; // Disables srcset for these IDs
