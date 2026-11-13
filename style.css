@@ -1604,8 +1604,13 @@ div.trust-badge:not(.alignfull):not(.alignwide) {
 .white-to-grey-dient {
 	padding-top: calc( 2 * var(--gap) );
 	padding-bottom: calc( 2 * var(--gap) );
+	margin-bottom: 0;
 	background: var(--grey-light);
 	background: linear-gradient(180deg, var(--grey-light) 25%, var(--white) 75%);
+}
+.white-to-grey-dient.reverse {
+	background: var(--grey-light);
+	background: linear-gradient(0deg, var(--grey-light) 25%, var(--white) 75%);
 }
 
 /* SERVICES PAGES */
@@ -1817,9 +1822,13 @@ ul.checkmarks.no-cols {
 	}
 
 	.cards,
-	.cards2 {
+	.cards2,
+	.cards4 {
 		color: var(--text);
 
+		h3 {
+			color: var(--text);
+		}
 		p {
 			text-align: left;
 			padding-left: 0;
